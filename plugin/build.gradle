@@ -2,10 +2,10 @@ apply plugin: 'java-library'
 apply plugin: 'groovy'
 
 //发到本地maven时打开
-apply plugin: 'maven'
+//apply plugin: 'maven'
 
 // JitPack Maven （发到本地maven时关闭）
-//apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.github.dcendents.android-maven'
 // Your Group
 group = 'com.github.yezizaiqiutian'
 

@@ -1,4 +1,4 @@
-package com.gh.databinding.plugin
+package com.gh.plugin
 
 import com.android.build.gradle.AppExtension
 import org.gradle.api.Plugin

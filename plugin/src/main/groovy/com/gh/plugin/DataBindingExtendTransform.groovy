@@ -1,8 +1,7 @@
-package com.gh.databinding.plugin
+package com.gh.plugin
 
 import com.android.build.api.transform.*
 import com.google.common.collect.ImmutableSet
-
 
 import org.apache.commons.codec.digest.DigestUtils
 import org.apache.commons.io.FileUtils
