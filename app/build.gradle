@@ -1,6 +1,6 @@
 plugins {
     id 'com.android.application'
-    id 'com.gh.databinding-ext'
+//    id 'com.gh.databinding-ext'
 }
 
 //以供DataBinding-Extend插件使用。
