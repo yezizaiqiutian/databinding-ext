@@ -1,6 +1,15 @@
 plugins {
     id 'com.android.application'
+    id 'com.gh.databinding-ext'
 }
+
+//以供DataBinding-Extend插件使用。
+//主功能的路径
+ext.mainProjectPath = "com/gh/databinding_ext"
+//保存主工程包含的组件名(去掉了lib_前缀)，以供DataBinding-Extend插件使用
+//例:com.gh.main
+ext.mainIncludesPath = new ArrayList<String>()
+//记录哪些依赖，在打aar时不加入此依赖，需要从POM中移除
 
 android {
     compileSdkVersion 30
@@ -30,5 +39,6 @@ android {
 }
 
 dependencies {
+    api 'com.google.android.material:material:1.3.0'
 
 }
