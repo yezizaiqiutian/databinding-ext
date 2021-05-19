@@ -1,0 +1,2 @@
+#databinding-ext
+##解决runtimeonly无法使用databinding问题,组件中DataBinderMapperImpl无法加入app主项目中

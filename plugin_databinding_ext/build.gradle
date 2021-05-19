@@ -1,6 +1,5 @@
 apply plugin: 'java-library'
 apply plugin: 'groovy'
-apply plugin: 'com.github.dcendents.android-maven'
 
 //发到本地maven时打开
 apply plugin: 'maven'
@@ -27,25 +26,25 @@ sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
 
 //发到本地maven时打开
-uploadArchives {
-    repositories {
-        mavenDeployer {
-//            repository(url: '') {
-//                authentication(
-//                        userName: '',
-//                        password: ''
-//                )
-//            }
-//            snapshotRepository(url: '') {
-//                authentication(
-//                        userName: '',
-//                        password: ''
-//                )
-//            }
-            repository(url: uri('../repo'))
-            pom.version = '0.0.2'
-            pom.artifactId = 'databinding-ext'
-            pom.groupId = 'com.gh'
-        }
-    }
-}
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+////            repository(url: '') {
+////                authentication(
+////                        userName: '',
+////                        password: ''
+////                )
+////            }
+////            snapshotRepository(url: '') {
+////                authentication(
+////                        userName: '',
+////                        password: ''
+////                )
+////            }
+//            repository(url: uri('../repo'))
+//            pom.version = '0.0.2'
+//            pom.artifactId = 'databinding-ext'
+//            pom.groupId = 'com.gh'
+//        }
+//    }
+//}
