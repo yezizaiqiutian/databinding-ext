@@ -52,6 +52,10 @@ class DataBindingExtendTransform extends Transform {
                     directoryInput.file.eachFileRecurse { File file ->
                         if (isFound) return
                         def mainProjectPath = project.extensions.extraProperties.get("mainProjectPath") as String
+                        if (mainProjectPath == null) {
+                            println "databinding-ext-------结束注入代码"
+                            return
+                        }
                         if (file.absolutePath.replace("\\", "/").contains("${mainProjectPath}/DataBinderMapperImpl.class")) {
                             ClassReader classReader = new ClassReader(new FileInputStream(file))
                             isFound = true
@@ -189,11 +193,11 @@ class DataBindingExtendTransform extends Transform {
         @Override
         protected void onMethodExit(int opcode) {
             super.onMethodExit(opcode)
-            print "开始注入代码...  "
+            println "databinding-ext-------开始注入代码...  "
             def mainIncludesPath = project.extensions.extraProperties.get("mainIncludesPath") as ArrayList<String>
             mainIncludesPath.each { String moduleName ->
 
-                print "正在注入代码库:${moduleName}/"
+                println "databinding-ext-------正在注入代码库:${moduleName}/"
 
                 mv.visitVarInsn(ALOAD, 1);
                 mv.visitTypeInsn(NEW, "${moduleName}/DataBinderMapperImpl");
@@ -202,7 +206,7 @@ class DataBindingExtendTransform extends Transform {
                 mv.visitMethodInsn(INVOKEVIRTUAL, "java/util/ArrayList", "add", "(Ljava/lang/Object;)Z", false);
                 mv.visitInsn(POP);
             }
-            println "结束注入代码"
+            println "databinding-ext-------结束注入代码"
         }
     }
 }
