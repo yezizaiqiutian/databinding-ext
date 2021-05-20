@@ -1,5 +1,9 @@
 #databinding-ext
 
+
+已弃用,请使用以下项目地址(该项目上传jitpack遇到一些问题,很多无用的提交,后期不会更新,最新更新对应以下项目0.0.1版本)
+https://github.com/yezizaiqiutian/runtimeonly-databinding-plugin
+
 ## from://https://github.com/michaelrepo/DataBindingExtendPlugin
 
 ## 解决runtimeonly无法使用databinding问题,组件中DataBinderMapperImpl无法加入app主项目中
